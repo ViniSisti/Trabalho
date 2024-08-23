@@ -23,7 +23,15 @@ public class Main {
     }
 
     public ArrayList<Integer> listRepeat(ArrayList<Integer> l) {
-        return new ArrayList<>();
+        ArrayList<Integer> l2 = new ArrayList<>();
+
+        for (Integer num : l) {
+            if (nOcorrencias(l, num) > 1 && !l2.contains(num)) {
+                l2.add(num);
+            }
+        }
+
+        return l2;
     }
 
     public ArrayList<Integer> union(ArrayList<Integer> l1, ArrayList<Integer> l2) {
