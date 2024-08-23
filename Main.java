@@ -3,7 +3,15 @@ import java.util.ArrayList;
 public class Main {
 
     public int nOcorrencias(ArrayList<Integer> l, Integer el) {
-        return 0;
+        int count = 0;
+
+        for (Integer num : l) {
+            if (num.equals(el)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public boolean hasRepeat(ArrayList<Integer> l) {
